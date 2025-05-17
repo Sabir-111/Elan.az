@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Elanlar</h1>
+        <p>Yeni elanları buradan tapa bilərsiniz.</p>
+    </header>
+
+    <main>
+        <section id="announcement-form">
+            <h2>Elan əlavə et</h2>
+            <form id="announcementForm">
+                <label for="title">Başlıq:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="content">İçerik:</label>
+                <textarea id="content" name="content" rows="4" required></textarea>
+
+                <button type="submit">Əlavə et</button>
+            </form>
+        </section>
+
+        <section>
+            <label for="search">Axtar:</label>
+            <input type="text" id="search" placeholder="Başlığa görə axtar...">
+        </section>
+
+        <section id="announcements">
+            <h2>Hazırkı Elanlar</h2>
+            <div id="announcementList"></div>
+        </section>
+    </main>
+
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
+    <footer>
+        <p>&copy; 2025 Elan Saytı. Bütün hüquqlar qorunur.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
