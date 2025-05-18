@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elan Saytı</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Elanlar</h1>
+    <p>Yeni elan əlavə edin və digər elanlara baxın</p>
+  </header>
+
+  <main>
+    <form id="announcementForm">
+      <label for="title">Başlıq:</label>
+      <input type="text" id="title" name="title" required />
+
+      <label for="content">Təsvir:</label>
+      <textarea id="content" name="content" rows="4" required></textarea>
+
+      <label for="category">Kateqoriya:</label>
+      <select id="category" name="category" required>
+        <option value="Avto">Avto</option>
+        <option value="Əmlak">Əmlak</option>
+        <option value="Texnika">Texnika</option>
+        <option value="Digər">Digər</option>
+      </select>
+
+      <label for="price">Qiymət (AZN):</label>
+      <input type="number" id="price" name="price" required />
+
+      <label for="image">Şəkil yüklə:</label>
+      <input type="file" id="image" name="image" accept="image/*" />
+
+      <button type="submit">Əlavə et</button>
+    </form>
+
+    <div id="filters">
+      <h3>Filtrlər</h3>
+      <label for="filterCategory">Kateqoriya:</label>
+      <select id="filterCategory">
+        <option value="Hamısı">Hamısı</option>
+        <option value="Avto">Avto</option>
+        <option value="Əmlak">Əmlak</option>
+        <option value="Texnika">Texnika</option>
+        <option value="Digər">Digər</option>
+      </select>
+
+      <label for="searchInput">Axtarış:</label>
+      <input type="text" id="searchInput" placeholder="Başlığa görə axtar..." />
+    </div>
+
+    <section id="announcements">
+      <h2>Əlavə olunmuş elanlar</h2>
+      <div id="announcementList"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Elan Saytı. Bütün hüquqlar qorunur.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
