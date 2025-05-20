@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Elan Saytı + Admin Mesajlar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Elanlar</h1></header>
+  <main>
+    <form id="announcementForm">
+      <input type="text" id="title" placeholder="Başlıq" required>
+      <textarea id="content" placeholder="Təsvir" required></textarea>
+      <input type="number" id="price" placeholder="Qiymət" required>
+      <button type="submit">Əlavə et</button>
+    </form>
+
+    <div id="announcementList"></div>
+
+    <section id="contact">
+      <h2>Bizimlə Əlaqə</h2>
+      <form id="contactForm">
+        <input type="text" id="contactName" placeholder="Adınız" required />
+        <input type="email" id="contactEmail" placeholder="E-poçt" required />
+        <textarea id="contactMessage" placeholder="Mesajınız..." required></textarea>
+        <button type="submit">Göndər</button>
+      </form>
+      <p id="contactSuccess" style="color: green; display:none;">Mesaj göndərildi!</p>
+    </section>
+
+    <section id="adminMessages" style="display:none;">
+      <h2>🛡 Admin Panel: Göndərilən Mesajlar</h2>
+      <div id="messageList"></div>
+    </section>
+  </main>
+  <footer><p>&copy; 2025 Elan Saytı</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
