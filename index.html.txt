@@ -1,0 +1,53 @@
+<!-- Qısa versiya: qeydiyyat, giriş, elan əlavə və admin paneli -->
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Elan Saytı (Qeydiyyat + Admin)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>📢 Elan Saytı</h1></header>
+  <main>
+    <section id="authSection">
+      <h2>🔐 Qeydiyyat və Giriş</h2>
+      <form id="registerForm">
+        <input type="text" id="regUsername" placeholder="Yeni istifadəçi adı" required>
+        <input type="password" id="regPassword" placeholder="Yeni şifrə" required>
+        <button type="submit">Qeydiyyat</button>
+      </form>
+
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="İstifadəçi adı" required>
+        <input type="password" id="loginPassword" placeholder="Şifrə" required>
+        <button type="submit">Daxil ol</button>
+      </form>
+
+      <div id="userPanel" style="display:none;">
+        <p id="welcomeUser"></p>
+        <button onclick="logout()">Çıxış</button>
+      </div>
+    </section>
+
+    <section id="announcementFormSection" style="display:none;">
+      <h2>Yeni Elan</h2>
+      <form id="announcementForm">
+        <input type="text" id="title" placeholder="Başlıq" required>
+        <textarea id="content" placeholder="Təsvir" required></textarea>
+        <button type="submit">Əlavə et</button>
+      </form>
+    </section>
+
+    <section id="adminPanel" style="display:none;">
+      <h2>🛡 Təsdiqlənməmiş Elanlar</h2>
+      <div id="pendingList"></div>
+    </section>
+
+    <section>
+      <h2>✅ Təsdiqlənmiş Elanlar</h2>
+      <div id="approvedList"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
