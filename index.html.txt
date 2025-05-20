@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>İstifadəçilər Arası Mesajlaşma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>💬 Mesajlaşma Sistemi</h1></header>
+  <main>
+    <section id="auth">
+      <h2>İstifadəçi Girişi</h2>
+      <input type="text" id="username" placeholder="İstifadəçi adı">
+      <button onclick="login()">Daxil ol</button>
+      <p id="loggedUser"></p>
+    </section>
+
+    <section id="sendMessage" style="display:none;">
+      <h2>✉️ Mesaj göndər</h2>
+      <input type="text" id="receiver" placeholder="Alıcı istifadəçi">
+      <textarea id="messageText" placeholder="Mesaj..." rows="4"></textarea>
+      <button onclick="sendMessage()">Göndər</button>
+    </section>
+
+    <section id="inbox" style="display:none;">
+      <h2>📥 Gələn Mesajlar</h2>
+      <div id="inboxList"></div>
+    </section>
+
+    <section id="sent" style="display:none;">
+      <h2>📤 Göndərilmiş Mesajlar</h2>
+      <div id="sentList"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
